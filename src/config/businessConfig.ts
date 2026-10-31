@@ -46,7 +46,7 @@ export const defaultBusinessConfig: BusinessConfig = {
   announcementBarText: 'Make every moment special with thoughtful gifts · Complimentary handwritten note with every gift',
 
   // Placeholder WhatsApp number (e.g. Indian mobile number with country code 91)
-  whatsAppNumber: '8762857606',
+  whatsAppNumber: '918762857606',
   whatsAppDisplayNumber: '+91 87628 57606',
 
   contactEmail: 'akeeragifts@gmail.com',

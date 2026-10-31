@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { imagePath } from '../utils/imagePath';
 import {
   ArrowLeft,
   Gift,
@@ -150,12 +151,12 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
           <div className="lg:col-span-7 space-y-3 sm:space-y-4 w-full">
             {/* Main Showcase Image (aspect-4/5, responsive, badges protected inside frame) */}
             <div className="relative aspect-4/5 w-full max-h-[480px] sm:max-h-[580px] rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-[#A7B7A0]/30 shadow-xs">
-              <img
-                src={selectedImage}
-                alt={product.name}
-                loading="eager"
-                className="w-full h-full object-cover object-center transition-all duration-300"
-              />
+             <img
+  src={imagePath(selectedImage)}
+  alt={product.name}
+  loading="eager"
+  className="w-full h-full object-cover object-center transition-all duration-300"
+/>
 
               {/* Status Badges (Neatly anchored without obstructing subject) */}
               <div className="absolute top-3 left-3 flex flex-col gap-1 items-start z-10">
@@ -195,11 +196,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
                       }`}
                       aria-label={`View photo ${idx + 1}`}
                     >
-                      <img
-                        src={img}
-                        alt={`${product.name} thumbnail ${idx + 1}`}
-                        className="w-full h-full object-cover object-center"
-                      />
+                      <img src={imagePath(img)} alt={`${product.name} thumbnail ${idx + 1}`}
+  className="w-full h-full object-cover object-center"
+/>
                     </button>
                   );
                 })}

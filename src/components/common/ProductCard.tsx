@@ -3,6 +3,7 @@ import { Sparkles, Eye, ArrowUpRight } from 'lucide-react';
 import { Product } from '../../types/product';
 import { WhatsAppButton } from './WhatsAppButton';
 import { defaultBusinessConfig } from '../../config/businessConfig';
+import { imagePath } from '../../utils/imagePath';
 
 interface ProductCardProps {
   product: Product;
@@ -28,7 +29,8 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       {/* Product Image Frame */}
       <div className="relative aspect-4/5 w-full bg-[#FFF9F4] overflow-hidden">
         <img
-          src={product.images[0] || 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800'}
+        src={imagePath(product.images[0] || 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800' )}
+          // src={product.images[0] || 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800'}
           alt={product.name}
           loading="lazy"
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
