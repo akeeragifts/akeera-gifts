@@ -1,0 +1,6 @@
+{
+  "name": "Ecommerce",
+  "description": "Premium online gift catalog with curated collections, variant selection, centralized branding, and direct WhatsApp ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
